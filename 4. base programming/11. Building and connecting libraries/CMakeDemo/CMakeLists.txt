@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.10)
+project(CMakeDemo)
+set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
+add_library(dynamicLibrary SHARED Header.h Source.cpp)
+add_executable(programm leaverClient.cpp)
+target_link_libraries(programm dynamicLibrary)

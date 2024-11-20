@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.10)
+project(five)
+set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
+add_library(dynamicLib SHARED equilateralTriangle.cpp isoscelesTriangle.cpp parallelogram.cpp qadrilateral.cpp rhombus.cpp rightTriangle.cpp square.cpp Triangle.cpp equilateralTriangle.h Figure.h isoscelesTriangle.h parallelogram.h qadrilateral.h rhombus.h rightTriangle.h square.h Triangle.h)
+add_executable(programm 5.cpp)
+target_link_libraries(programm dynamicLib)
